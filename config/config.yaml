@@ -1,0 +1,33 @@
+source_channel:
+  id: "UC8semOV-MqT3enT4M0mS1ow"
+  url: "https://youtube.com/channel/UC8semOV-MqT3enT4M0mS1ow"
+
+target_channel:
+  id: "UCCKQxDfs0eIVsLmnc4JVtpQ"
+  url: "https://youtube.com/@3geedt-aslaf-as7ab-al7adeeth"
+
+scheduler:
+  morning: "06:00"
+  evening: "18:00"
+  timezone: "Asia/Riyadh"
+
+download:
+  dir: "downloads"
+  quality: "best[height<=1080]"
+  max_age_days: 7
+  keep_after_upload: false
+
+upload:
+  privacy: "public"
+  category_id: "22"       # People & Blogs — change if needed
+  keep_original_title: true
+  keep_original_description: true
+  add_source_credit: true
+  source_credit_template: "\n\n---\nOriginal video by: {channel_name}\n{video_url}"
+
+gemini:
+  enabled: false
+  model: "gemini-1.5-flash"   # free tier
+  translate_title: false
+  translate_description: false
+  target_language: "ar"

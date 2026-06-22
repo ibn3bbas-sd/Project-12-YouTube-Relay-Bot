@@ -1,0 +1,13 @@
+services:
+  relay-bot:
+    build: .
+    container_name: youtube-relay-bot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./config:/app/config        # OAuth token persisted here
+      - ./downloads:/app/downloads  # Temp download storage
+      - ./logs:/app/logs            # Log files
+      - ./data:/app/data            # Processed video IDs
+    environment:
+      - TZ=Asia/Riyadh

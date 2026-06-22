@@ -1,0 +1,29 @@
+# Secrets & credentials — NEVER commit these
+.env
+config/token.json
+config/client_secret*.json
+config/oauth*.json
+*.credentials.json
+
+# Downloads & logs
+downloads/
+logs/
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
